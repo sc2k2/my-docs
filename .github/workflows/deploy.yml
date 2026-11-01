@@ -7,11 +7,6 @@ on:
       - 'docs/**'
       - 'mkdocs.yml'
 
-permissions:
-  contents: write
-  pages: write
-  id-token: write
-
 jobs:
   deploy:
     runs-on: ubuntu-latest
@@ -36,3 +31,4 @@ jobs:
         with:
           branch: gh-pages
           folder: site
+          clean: true
