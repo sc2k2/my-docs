@@ -1,4 +1,5 @@
 name: Deploy MkDocs to GitHub Pages
+
 on:
   push:
     branches:
@@ -20,8 +21,7 @@ jobs:
           python-version: '3.9'
 
       - name: 安装MkDocs及主题
-        run: |
-          pip install mkdocs-material
+        run: pip install mkdocs-material
 
       - name: 构建静态文档
         run: mkdocs build
